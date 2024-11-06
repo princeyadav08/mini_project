@@ -33,6 +33,37 @@
         </div>
     </section>
     </section>
+    <section>
+        <div class="maps">
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+<script>
+  function initMap() {
+    var location = { lat: -34.397, lng: 150.644 }; // Replace with your coordinates
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: location
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+  }
+</script>
+<div id="map" style="height: 500px; width: 100%;"></div>
+<iframe src="YOUR_EMBED_URL" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<div id="map" style="height: 500px;"></div>
+<script>
+  var map = L.map('map').setView([51.505, -0.09], 13); // Replace with your coordinates
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map);
+  L.marker([51.505, -0.09]).addTo(map); // Add a marker
+</script>
+
+        </div>
+    </section>
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
